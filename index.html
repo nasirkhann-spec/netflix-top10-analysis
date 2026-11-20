@@ -81,6 +81,10 @@ li{margin:4px 0}
 <div class="card"><div class="scroll"><svg id="c2" viewBox="0 0 760 340" role="img" aria-label="Line chart of monthly Top 10 appearances for movies and TV shows, April 2020 to March 2022"></svg></div></div>
 <p>TV shows led in 23 of 24 months. The only month where movies led was <b>November 2020</b> (157 movie vs. 133 TV appearances). March 2022 has only 11 days of data. Because every day has 10 slots, monthly totals mainly reflect the number of days; the useful signal is the <i>balance</i> between the lines.</p>
 
+<h3>Chart 2b: TV share of appearances by month</h3>
+<div class="card"><div class="scroll"><svg id="c5" viewBox="0 0 760 300" role="img" aria-label="Bar chart of TV shows' share of Top 10 appearances in each month from April 2020 to March 2022, with a 50 percent reference line"></svg></div></div>
+<p>This shows the balance directly. Bars start at 0%, the dashed line is 50%, and TV is above it in every month except <b>November 2020</b> (45.9%, orange). The share ranges from 45.9% to 75.5%. The last bar (March 2022, 11 days) is lighter because it is incomplete.</p>
+
 <h3>Chart 3: Average ranking</h3>
 <div class="card"><svg id="c3" viewBox="0 0 720 230" role="img" aria-label="Bar chart of average rank: movies 5.64, TV shows 5.42"></svg></div>
 <p><b>Lower is better.</b> TV shows averaged rank 5.42 and movies 5.64, a gap of only 0.22 on a 1–10 scale. TV shows also held rank 1 more often (494 times, 11.1% of their appearances, vs. 216 times, 8.3%, for movies).</p>
@@ -127,11 +131,11 @@ li{margin:4px 0}
 <div class="note"><b>Answer:</b> On Netflix, between April 2020 and March 2022, <b>TV shows were more popular than movies</b>. They took 63.0% of Top 10 appearances, led in 23 of 24 months, and stayed on the chart longer. The advantage in average rank was small, and movies led in November 2020.</div>
 <h3>Recommendations</h3>
 <ol>
-<li><b>Highlight TV show popularity:</b> the 63% / 37% split is the clearest result.</li>
-<li><b>Show changes over time:</b> use monthly share rather than raw counts, and note that movies briefly led in November 2020.</li>
-<li><b>Compare viewing patterns:</b> use days in the Top 10 per title to show that TV’s lead is consistent with longevity rather than more titles.</li>
-<li><b>Keep visualizations simple</b> with consistent colors and labelled axes.</li>
-<li><b>Avoid unsupported conclusions:</b> rankings show popularity on Netflix, not total viewing.</li>
+<li><b>Give TV series priority when deciding what to feature or promote.</b><br><i>Evidence:</i> 63.0% of Top 10 slots and a TV lead in 23 of 24 months. <i>Uncertainty:</i> these are rankings, not hours watched, and one title (Cocomelon) is 9.6% of TV appearances. Without it TV still holds 60.6%.</li>
+<li><b>Favor titles with staying power over one-off launches.</b><br><i>Evidence:</i> the median TV title stayed 9 days vs. 6 for movies. <i>Uncertainty:</i> the counts are cumulative and cut off at both ends of the data, so this is consistent with longer holds, not proof of them.</li>
+<li><b>Do not write movies off.</b> Movies led in November 2020 (Chart 2b), and the rank gap is only 0.22.<br><i>Evidence:</i> TV held rank 1 more often (11.1% vs. 8.3% of appearances), yet average ranks are close. <i>Uncertainty:</i> November 2020 is a single month, so study it as a case rather than treating it as a pattern.</li>
+<li><b>Do not forecast a rising TV share from this data.</b><br><i>Evidence:</i> matched months show +3.1 points in April–December and −0.8 in January–March 11. <i>Uncertainty:</i> two comparisons and no significance test. Track monthly share (Chart 2b) before shifting budget.</li>
+<li><b>Collect hours-watched data before any decision that depends on viewing time.</b> Rankings show popularity on Netflix only, and they say nothing about total viewing or other platforms.</li>
 </ol>
 <h3>Limitations</h3>
 <ul>
@@ -173,7 +177,7 @@ li{margin:4px 0}
 <li><b>Wording:</b> say “consistent with” where the data cannot establish a cause, and describe the 0.22 rank gap as small.</li>
 <li><b>Reproducibility:</b> label summaries as snapshots and confirm that they match the embedded data (below).</li>
 <li><b>Downloads:</b> offer the CSV through a standard browser download and show a message if it fails.</li>
-<li><b>Assignment brief:</b> map each requirement to a section once the brief is supplied. Until then, rubric compliance is unverified.</li>
+<li><b>Assignment brief:</b> the MGTS103 scoring form has been applied. The full project brief and its required methods are still unverified.</li>
 </ol>
 <h3>Snapshot check</h3>
 <ul id="chk" aria-live="polite"><li>Checking…</li></ul>
@@ -183,7 +187,7 @@ li{margin:4px 0}
 <h2>References</h2>
 <p>Netflix Daily Top 10 dataset, file <i>netflix daily top 10.csv</i>, provided for MGTS103. Supplied as the archive <i>archive (2).zip</i>, which contains this single CSV file (7,100 rows; file dated March 12, 2022). The unmodified data is reproduced in <a href="#dataset">Section 6</a>.</p>
 <p><i>MGTS103 Data Visualization Project Requirements</i>. Course project brief provided with the assignment. It sets the research question (“Did people watch more movies or TV shows during COVID-19?”), the data cleaning steps, the four required charts and the analysis requirements that this project follows.</p>
-<p class="sub"><b>Review status:</b> The original MGTS103 brief was not available to the reviewer, so compliance with its rubric is unverified. This page documents what it did and does not claim to meet the rubric.</p>
+<p class="sub"><b>Review status:</b> The MGTS103 scoring form was used to add Chart 2b and rewrite the recommendations as evidence-based decisions. The full project brief and the list of required methods were not available, so compliance with them is unverified.</p>
 </footer>
 
 <script type="text/plain" id="rawcsv">
@@ -14385,7 +14389,13 @@ el(s,"rect",{x:100,y:yy,width:d[1]*55,height:38,fill:d[2]});el(s,"text",{x:108+d
 for(let v=0;v<=10;v+=2){el(s,"line",{x1:100+55*v,x2:100+55*v,y1:20,y2:150,stroke:line,"stroke-dasharray":"3 3"});el(s,"text",{x:100+55*v,y:168,"text-anchor":"middle",class:"m"},v)}
 el(s,"text",{x:375,y:188,"text-anchor":"middle",class:"m"},"Average rank (1 = best, 10 = last). Lower is better.");
 el(s,"text",{x:375,y:210,"text-anchor":"middle",class:"m"},"Gap between categories: 0.22");
-draw4()}
+draw4();drawShare()}
+function drawShare(){const s=document.getElementById("c5");s.innerHTML="";const mov=css("--mov"),tv=css("--tv"),line=css("--line"),L=50,R=740,B=250,Tp=15,w=(R-L)/24,y=v=>B-v/100*(B-Tp);
+[0,25,50,75,100].forEach(v=>{const a={x1:L,x2:R,y1:y(v),y2:y(v),stroke:v==50?css("--fg"):line};if(v==50)a["stroke-dasharray"]="5 4";el(s,"line",a);el(s,"text",{x:L-8,y:y(v)+4,"text-anchor":"end",class:"m"},v+"%")});
+T.forEach((t,i)=>{const p=t/(t+M[i])*100,b=el(s,"rect",{x:L+i*w+2,y:y(p),width:w-4,height:B-y(p),fill:p<50?mov:tv,"fill-opacity":i==23?.5:1});b.appendChild(Object.assign(document.createElementNS(NS,"title"),{textContent:lab(i)+": TV "+p.toFixed(1)+"%"}))});
+for(let i=0;i<24;i+=3)el(s,"text",{x:L+i*w+w/2,y:B+18,"text-anchor":"middle",class:"m"},lab(i));
+el(s,"text",{x:(L+R)/2,y:B+40,"text-anchor":"middle",class:"m"},"Month (Mar 22 = 11 days only)");
+el(s,"text",{transform:"rotate(-90) translate(-135,14)","text-anchor":"middle",class:"m"},"TV share of appearances")}
 let lvl="t";
 function draw4(){const s=document.getElementById("c4");s.innerHTML="";const mov=css("--mov"),tv=css("--tv"),line=css("--line");
 const X=v=>90+Math.log10(v)/Math.log10(500)*610;
